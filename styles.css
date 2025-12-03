@@ -2,10 +2,11 @@
 :root{
     --primary-color: #fcfcfc;
     --secundary-color: #03dac6;
-    --hover-color: #dfd000;
+    --hover-color: #d48700f5;
     --nav-color: #00004f;
-    --background-color: #00007d;
+    --background-color: #00003a;
     --degradado: linear-gradient(45deg, #f06, #3cf, #f06);
+    --degradado2:linear-gradient(135deg, #FFC371, #FF5F6D);
     --border-radius: 8px;
     --transition-duration: 0.3s;
 }
@@ -65,6 +66,10 @@ nav .logo {
     margin-right: auto;
     font-size: 1.7rem;
     font-weight: bold;
+    background-image: var(--degradado2);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
 }
 
 nav a {
@@ -134,20 +139,36 @@ nav a.active-link{
     display: flex;   
     align-items: center;
     padding: 0 10%;
+    
 }
+
+.description-text{
+        max-width: 700px;
+}
+
 
 .description h1{
     font-size: 3.5rem;
     font-weight: bold;
+    
 }
 
 
 .description-text h2{
     font-size: 2rem;
     font-weight: bold;
-    color: red;
+    background-image: var(--degradado);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
 }
 
+.description-text p{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 600px;
+}
 
 .contact-button{
     width: 180px;
@@ -165,17 +186,30 @@ nav a.active-link{
     justify-content: center;
     letter-spacing: 1px;
     transition: 500ms ease, color 500ms ease;
+    position: relative;
+    margin-top: 100px;
 }
 
 
 .contact-button:hover{
     background-position: 100% 0;
     color: var(--nav-color);
+}
+
+.contact-button::after{
+    filter: blur(5px);
 
 }
 
-
-
+.contact-button::before {
+    content: ''; 
+    position: absolute; 
+    inset: 0; 
+    background-image: var(--degradado);
+    filter: blur(10px);
+    z-index: -1; 
+    border-radius: inherit; 
+}
 
 
 
@@ -222,8 +256,11 @@ nav.show ~ #overlay{
 }
 
 #open-sidebar-button{
-    display: block;}
+    display: block;
+color: white;
+}
 #close-sidebar-button{
-    display: block;}
+    display: block;
+    color: white}
 
 }

@@ -1,0 +1,56 @@
+[33mcommit 507893d82fcce937cbc40d2400dc9a1baf0bcc0e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 19:41:24 2025 +0100
+
+    Colors and style improvements
+
+[33mcommit 799fd200cfc576af9eaec481e7767645cecb2291[m
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 17:23:13 2025 +0100
+
+    Navbar Terminada
+
+[33mcommit 1d61b90cccb5144ecc6f46640fc37a1b58791474[m
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 14:39:52 2025 +0100
+
+    NavBar Movil y Aria
+
+[33mcommit 3b9c90c5b7c346e28f8a5a359251a184743782f3[m
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 12:58:06 2025 +0100
+
+    NavBar Completada
+
+[33mcommit 13f66e1d5b5ae2f5320c9afda9d372e8e6dcd27f[m
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 11:30:59 2025 +0100
+
+    Guardando primer index.html
+
+[33mcommit 53d00ae3d78fce6e79c2b2c60454fd453400ce74[m
+Merge: 21e86e8 fc122ff
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 11:12:41 2025 +0100
+
+    Merge branch 'master' of https://github.com/Jorge-Rodri/portfolio
+
+[33mcommit fc122ffec8f7d367dbf0cd13a7f02a0a690eb5fe[m
+Author: Jorge Rodríguez Espinosa <jorgerogri@gmail.com>
+Date:   Wed Dec 3 10:42:32 2025 +0100
+
+    Add description section to README
+    
+    Added a description section to the README.
+
+[33mcommit 163a2a4d4f6c634d9198cd9135daf91a1ac0a624[m
+Author: Jorge Rodríguez Espinosa <jorgerogri@gmail.com>
+Date:   Wed Dec 3 10:40:36 2025 +0100
+
+    Initial commit
+
+[33mcommit 21e86e8f5e6b8f76ed2601e42decc572a54b482f[m
+Author: Jorge-Rodri <jorgerogri@gmail.com>
+Date:   Wed Dec 3 10:36:11 2025 +0100
+
+    Primera prueba

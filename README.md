@@ -2,4 +2,4 @@
 My portfolio
 
 ## description
-My first portfolio and repo using GIT
+**My first portfolio and repo using GIT markdown**

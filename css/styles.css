@@ -277,6 +277,7 @@ nav a.active-link{
     position: relative;
     width: 410px;
     height: 410px;
+    
 }
 
 .home-img .glowing-circle{
@@ -287,6 +288,9 @@ nav a.active-link{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .home-img .glowing-circle::after{
@@ -316,6 +320,7 @@ nav a.active-link{
     object-fit: cover;
     transform: translateX (-50%);
     max-width: 350px;
+    
 }
 
 .glowing-circle span{
@@ -332,6 +337,7 @@ nav a.active-link{
 .glowing-circle span:nth-child(1){
     filter: blur(20px);
     animation: rotate 6s linear infinite;
+    
 }
 
 
@@ -357,6 +363,8 @@ nav.show{
     right: 0;
 }
 
+
+
 nav.show ~ #overlay{
     opacity: 1; 
     visibility: visible;
@@ -366,7 +374,6 @@ nav.show ~ #overlay{
         width: 100%;
         flex-direction: column;
         margin: 0; 
-
     }
 
     nav a {
@@ -379,6 +386,7 @@ nav.show ~ #overlay{
     display: none;
 }
 
+
 #open-sidebar-button{
     display: block;
 color: white;
@@ -386,5 +394,18 @@ color: white;
 #close-sidebar-button{
     display: block;
     color: white}
+}
 
+
+@media screen and (max-width:1053px) {
+
+    .social-1{
+    display: none;
+    }
+}
+
+@media screen and (max-width:1600px) {
+    .description{
+    height: auto;
+}   
 }

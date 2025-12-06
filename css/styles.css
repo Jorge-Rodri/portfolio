@@ -27,6 +27,10 @@ html {
     background: var(--background-color);
 }
 
+body {
+    padding-top: 80px;
+}
+
 .skip-link {
     opacity: 0;
     pointer-events: none;
@@ -50,6 +54,12 @@ html {
 
 nav {
     background-color: var(--nav-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /
 }
 
 nav ul {
@@ -62,6 +72,7 @@ nav ul {
 nav li{
     display: flex;
     z-index: 1000;
+    text-align: center;
 
 }
 
@@ -353,11 +364,21 @@ nav a.active-link{
         top: 0;
         right: -100%;
         height: 100vh;
+        left: auto;
         width: min(15em, 100%);
         z-index: 10;
         border-left: 1px solid var(--hover-color);
         transition: right 0.3s ease-in-out;
     }
+
+#open-sidebar-button{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    background-color: var(--nav-color);
+    border-radius: 15px;
+}
     
 nav.show{
     right: 0;

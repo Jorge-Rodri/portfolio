@@ -84,6 +84,9 @@ nav .logo {
     -webkit-background-clip: text;
     background-clip: text; 
     color: transparent;
+    opacity: 0;
+    animation: slideTop 1s ease forwards 0.3s;
+
 }
 
 nav a {
@@ -95,6 +98,10 @@ nav a {
     font-weight: bold;
     padding: 1rem 2rem;
     transition: background-color 500ms ease;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+
 }
 
 nav a:not(.logo):not(.contact):hover {
@@ -127,6 +134,8 @@ nav a.active-link{
     padding: 1em;
     margin-left: auto;
     cursor: pointer;
+    opacity: 0;
+    animation: slideTop 1s ease forwards 0.3s;
 }
 
 #close-sidebar-button{
@@ -171,6 +180,9 @@ nav a.active-link{
 .description h1{
     font-size: 3.5rem;
     font-weight: bold;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.4s;
     
 }
 
@@ -182,12 +194,20 @@ nav a.active-link{
     -webkit-background-clip: text;
     background-clip: text; 
     color: transparent;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .description-text p{
     margin-top: 1rem;
     font-size: 1.1rem;
     line-height: 1.5;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
+    
+    
 }
 
 .contact-button{
@@ -208,6 +228,9 @@ nav a.active-link{
     transition: 500ms ease, color 500ms ease;
     position: relative;
     margin-top: 100px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.6s;
 }
 
 
@@ -247,6 +270,27 @@ nav a.active-link{
     margin: 20px 0;
     z-index: 1;
     margin-right: 50px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.6s;
+   opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+
+
+
+.social-1 :nth-child(2){
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.social-1 :nth-child(3){
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.5s;
 }
 
 .social-1 a::before{
@@ -260,6 +304,8 @@ nav a.active-link{
     z-index: -1;
     transition: transform 0.3s ease;
   }
+
+
   .social-1 a:hover::before {
     filter: blur(7px);
   }
@@ -277,10 +323,10 @@ nav a.active-link{
     transition: transform 0.3s ease;
   }
 
+
   .social-1 a:hover::after {
     transform: scale(0);
   }
-
 
 
 
@@ -288,6 +334,9 @@ nav a.active-link{
     position: relative;
     width: 410px;
     height: 410px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
     
 }
 
@@ -429,4 +478,73 @@ color: white;
     .description{
     height: auto;
 }   
+}
+
+
+
+
+
+
+
+
+/*KEYFRAMES ANIMATION*/
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

@@ -38,3 +38,26 @@ html.es-movil button {
 html.es-movil .home-img {
     background-color: red;
 }
+
+@media (max-width: 1370px) {
+
+    /* 1. Ocultar el cursor personalizado */
+    .circle {
+        display: none !important;
+    }
+
+    /* 2. Restaurar la flecha normal del sistema en toda la web */
+    body {
+        cursor: auto !important; 
+    }
+
+    /* 3. FORZAR la "manita" en elementos interactivos */
+    a, 
+    button, 
+    input[type="submit"], 
+    input[type="button"], 
+    [role="button"],
+    .clickable { /* Añade aquí cualquier otra clase interactiva que uses */
+        cursor: pointer !important;
+    }
+}

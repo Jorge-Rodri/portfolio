@@ -46,3 +46,10 @@ function animateCircles() {
 animateCircles();
 
 
+// Detecta si es un sistema operativo móvil
+const isMobileOS = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// Si es móvil, añade la clase 'es-movil' a la etiqueta <html>
+if (isMobileOS) {
+    document.documentElement.classList.add('es-movil');
+}

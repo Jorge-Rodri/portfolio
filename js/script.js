@@ -18,3 +18,4 @@ navLinks.forEach(link => {
         closeSidebar();
     });
 });
+

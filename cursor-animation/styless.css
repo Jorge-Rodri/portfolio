@@ -21,20 +21,20 @@ a, button, input[type="submit"], [data-cursor-interactive] {
     cursor: none !important; /* El !important es solo por si acaso otro estilo lo está sobrescribiendo */
 }
 
-/* Asegura que el cursor nativo esté activo y el cursor personalizado esté oculto
-   en cualquier pantalla hasta un tamaño de tableta grande (ej. 1024px) */
-@media (max-width: 1370px) {
-    body {
-        cursor: default !important; 
-    }
-    .circle {
-        display: none !important;
-    }
 
-    /* C. Muestra el puntero (la mano) en los elementos interactivos */
-    a, button, input[type="submit"], [data-cursor-interactive], [role="button"] {
-        /* Sobrescribe la regla "cursor: none" para que aparezca la mano */
-        cursor: pointer !important;
+/* Esta regla SOLO se activa si JS detectó Android/iOS */
+html.es-movil .circle {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
+/* Opcional: Asegúrate de que los botones tengan cursor normal en estos casos */
+html.es-movil a, 
+html.es-movil button {
+    cursor: pointer !important;
+}
+
+html.es-movil .home-img {
+    background-color: red;
 }

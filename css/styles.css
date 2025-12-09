@@ -340,6 +340,7 @@ nav a.active-link{
     animation: zoomIn 1s ease forwards;
     animation-delay: 1s;
     
+    
 }
 
 .home-img .glowing-circle{
@@ -401,7 +402,6 @@ nav a.active-link{
     animation: rotate 6s linear infinite;
     
 }
-
 
 
 
@@ -480,12 +480,8 @@ nav a.active-link{
 @media screen and (max-width:1600px) {
     .description{
     height: auto;
-}   
 }
-
-
-
-
+}   
 
 
 

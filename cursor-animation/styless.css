@@ -35,9 +35,6 @@ html.es-movil button {
     cursor: pointer !important;
 }
 
-html.es-movil .home-img {
-    background-color: red;
-}
 
 @media (max-width: 1370px) {
 

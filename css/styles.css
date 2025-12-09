@@ -89,6 +89,10 @@ nav .logo {
 
 }
 
+.logomobile{
+        display: none;
+    }
+
 nav a {
     display: flex;
     align-items: center; 
@@ -166,16 +170,12 @@ nav a.active-link{
     display: flex;
     flex-wrap: wrap-reverse;
     height: 100vh;
-    justify-content: center;
-    
-        
-    
+    justify-content: center;  
 }
 
 .description-text{
         max-width: 700px;  
-        margin-right: 5vw;
-          
+        margin-right: 5vw;        
 }
 
 
@@ -185,11 +185,11 @@ nav a.active-link{
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 0.4s;
-    
 }
 
 
 .description-text h2{
+    margin-top: 1.5rem;
     font-size: 2rem;
     font-weight: bold;
     background-image: var(--degradado);
@@ -202,17 +202,16 @@ nav a.active-link{
 }
 
 .description-text p{
-    margin-top: 1rem;
-    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 0.7s;
-    
-    
+    animation-delay: 0.7s;    
 }
 
 .contact-button{
+    margin-top: 70px;
     width: 180px;
     height: 50px;
     font-size: 1.2rem;
@@ -229,7 +228,6 @@ nav a.active-link{
     letter-spacing: 1px;
     transition: 500ms ease, color 500ms ease;
     position: relative;
-    margin-top: 100px;
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 1.6s;
@@ -404,7 +402,20 @@ nav a.active-link{
 }
 
 
+.About-me{
+    background-color: red;
+    
+}
 
+.About-me h2{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-image: var(--degradado);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+}
 
 
 
@@ -458,6 +469,23 @@ nav a.active-link{
         display: none;
     }
 
+    .logomobile {
+        display: flex;
+        position: absolute;
+        white-space: nowrap;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        font-weight: bold;
+        background-image: var(--degradado2);
+        -webkit-background-clip: text;
+        background-clip: text; 
+        color: transparent;
+        opacity: 0;
+        animation: slideToplobomobile 1s ease forwards 0.3s;
+    }
+
     #open-sidebar-button{
         display: block;
         color: white;
@@ -480,6 +508,7 @@ nav a.active-link{
 @media screen and (max-width:1600px) {
     .description{
     height: auto;
+    margin-bottom: 150px;
 }
 }   
 
@@ -495,7 +524,7 @@ nav a.active-link{
 /*KEYFRAMES ANIMATION*/
 
 @keyframes slideTop {
-    0% {
+    0% {    
         opacity: 0;
         transform: translateY(90px);
     }
@@ -505,7 +534,16 @@ nav a.active-link{
     }
 }
 
-
+@keyframes slideToplobomobile {
+    0% {
+        opacity: 0;
+        transform: translateY(90px) translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
 
 @keyframes slideRight {
     0% {

@@ -494,9 +494,9 @@ nav a.active-link{
 
 .grid-container{
     display: grid;
-    width: 100%;
+    max-width: 2200px;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 9vw 9vw 12vw 12vw 12vw 12vw;
+    grid-template-rows: 9vw 9vw 12vw 12vw 9vw 9vw;
     justify-content: center;    
     gap: 3vw 0;
     grid-template-areas: 
@@ -533,11 +533,10 @@ nav a.active-link{
 .card-title{
     font-size: 1.7rem;
     font-weight: bold;
-    margin: 0 20px;
     padding: 15px 0 0 0;
     color: var(--primary-color);
     flex-shrink: 0;
-    margin-top: auto;
+    margin: auto 5%;
     font-style: italic;
 }
 
@@ -550,10 +549,9 @@ nav a.active-link{
 }
 .card-description{
     font-size: 1rem;
-    margin: 0 1vw;
-    padding: 10px 10px 30px 10px; ;
+    padding: 10px 10px 20px 10px; 
     color: var(--primary-color);
-    margin-top: auto;
+    margin: auto 5%;
     overflow: hidden;
 
 

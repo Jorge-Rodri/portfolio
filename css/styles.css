@@ -2,11 +2,12 @@
 :root{
     --primary-color: #ebebeb;
     --secundary-color: #03dac6;
-    --hover-color: #d48700f5;
+    --hover-color: #f75f01;
     --nav-color: #131313;
     --background-color: #131313;
     --degradado: linear-gradient(45deg, rgb(255, 115, 0), rgb(238, 0, 0), rgb(204, 112, 7));
     --degradado2:linear-gradient(135deg, #f75f01, #FF5F6D);
+    --degradado3: linear-gradient(45deg, #f75f01, #4005e4, #f75f01, #4005e4);
     --border-radius: 8px;
     --transition-duration: 0.3s;
 }
@@ -42,6 +43,11 @@ html {
 
 body {
     padding-top: 80px;
+}
+
+body::selection{
+    background: var(--hover-color);
+    color: var(--nav-color);
 }
 
 .skip-link {
@@ -431,6 +437,132 @@ nav a.active-link{
 }
 
 
+.portfolio-grid{
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.card{
+    background-color: var(--nav-color);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.9); 
+    position: relative;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: var(--degradado2);
+    filter: blur(15px);
+    z-index: -1;
+    background: var(--degradado3);
+    animation: 
+        breathingGlow 3s ease-in-out infinite alternate,
+        gradientMove 10s linear infinite;
+    background-size: 300% 300%;
+    will-change: background-position, opacity, transform;
+}
+
+
+.grid-container > :nth-child(1)::before { 
+    animation-delay: -0.3s; 
+}
+
+.grid-container > :nth-child(2)::before { 
+    animation-delay: -1.9s; 
+}
+
+.grid-container > :nth-child(3)::before { 
+    animation-delay: -2.7s; 
+}
+
+.grid-container > :nth-child(4)::before { 
+    animation-delay: -0.3s; 
+}
+
+
+
+
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 9vw 9vw 12vw 12vw 12vw 12vw;
+    justify-content: center;    
+    gap: 3vw 0;
+    grid-template-areas: 
+    "box-1 box-1 box-3 box-3"
+    "box-1 box-1 box-3 box-3"
+    "box-1 box-1 box-4 box-4"
+    "box-1 box-1 box-4 box-4"
+    "box-2 box-2 box-4 box-4"
+    "box-2 box-2 box-4 box-4";
+}
+
+
+
+.card-image{
+    min-height: 40%;
+    overflow: hidden; 
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.card-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.card-2 img, .card-3 img, .card-4 img{
+    object-position: center;
+
+}
+
+
+.card-title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 15px 0 0 0;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-top: auto;
+    font-style: italic;
+}
+
+.card-title::first-letter{
+    background-image: var(--degradado2);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    
+}
+.card-description{
+    font-size: 1rem;
+    margin: 0 1vw;
+    padding: 10px 10px 30px 10px; ;
+    color: var(--primary-color);
+    margin-top: auto;
+    overflow: hidden;
+
+
+}
+
+
+
+
+
 
 
 @media screen and (max-width:700px) {
@@ -529,8 +661,30 @@ nav a.active-link{
     .cursor-animation{
     display: none !important;
     visibility: hidden !important;
-    opacity: 0 !important;    
+    opacity: 0 !important;   
 }
+
+.card-image{
+    min-height: 60vw;
+    overflow: hidden; 
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.grid-container{
+    
+    grid-template-columns: 2fr;
+    grid-template-rows: 100vw 100vw 100vw 100vw;
+    justify-content: center;  
+    margin: 0 7vw;  
+    gap: 10vw 0;
+    grid-template-areas: 
+    "box-1"
+    "box-2"
+    "box-3"
+    "box-4";
+}
+
 }   
 
 
@@ -602,5 +756,28 @@ nav a.active-link{
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes breathingGlow {
+  from {
+    opacity: 0.7;
+    transform: scale(0.99); /
+  }
+  to {
+    opacity: 0.9; 
+    transform: scale(1.02);
+  }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

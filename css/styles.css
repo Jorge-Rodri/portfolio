@@ -460,7 +460,6 @@ nav a.active-link{
     content: '';
     position: absolute;
     inset: -3px;
-    background: var(--degradado2);
     filter: blur(15px);
     z-index: -1;
     background: var(--degradado3);
@@ -563,7 +562,7 @@ nav a.active-link{
 
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:700px), (max-height:500px) {
     nav {
         position: fixed;
         top: 0;
@@ -639,6 +638,29 @@ nav a.active-link{
         display: block;
         color: white}
     }
+
+    .home-img{
+    width: 370px;
+    height: 370px;
+}
+
+
+.home-img .glowing-circle::after{
+    width: 340px;
+    height: 340px;
+}
+
+
+.glowing-circle .image{
+    width: 340px;
+    height: 340px;  
+}
+
+.image img {
+    width: 320px;
+    max-width: 320px;
+    
+}
 
 
 @media screen and (max-width:1053px) {

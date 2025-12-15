@@ -12,6 +12,35 @@
     --transition-duration: 0.3s;
 }
 
+/* COLORES AZUL BLANCO
+
+:root{
+    --primary-color: #120808;
+    --secundary-color: #03dac6;
+    --hover-color: #01a9f7;
+    --nav-color: #f6f6f6;
+    --background-color: #f6f6f6b3;
+    --degradado: linear-gradient(45deg, rgba(12, 153, 209, 0.977), rgba(21, 0, 117, 0.973), rgba(0, 170, 237, 0.977));
+    --degradado2:linear-gradient(135deg, #01d2f7, #27009d);
+    --degradado3: linear-gradient(45deg, rgb(11, 0, 112), #4598ff,  rgb(0, 19, 114),rgb(57, 146, 234)0);
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+} */
+/* COLORES ROJO OSCURO
+
+:root{
+    --primary-color: #ebebeb;
+    --secundary-color: #03dac6;
+    --hover-color: #f75f01;
+    --nav-color: #131313;
+    --background-color: #131313;
+    --degradado: linear-gradient(45deg, rgb(255, 115, 0), rgb(205, 53, 53), rgb(204, 112, 7));
+    --degradado2:linear-gradient(135deg, #f75f01, #FF5F6D);
+    --degradado3: linear-gradient(45deg, #f75f01, #4005e4, #f75f01, #4005e4);
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+} */
+
 /* COLORES AZUL MARINO
 :root{
     --primary-color: #fcfcfc;

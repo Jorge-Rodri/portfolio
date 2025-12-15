@@ -142,7 +142,6 @@ nav a.active-link{
     padding: 10px 25px;
     border-radius: 25px;
     transition: background-color 500ms ease;
-
 }
 
 #a:hover{
@@ -421,13 +420,16 @@ nav a.active-link{
 }
 
 
-.About-me{
-    background-color: red;
-    
+.about-me{
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
-.About-me h2{
-    margin-top: 1.5rem;
+.about-me h2{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: bold;
     background-image: var(--degradado);
@@ -436,9 +438,22 @@ nav a.active-link{
     color: transparent;
 }
 
+.about-me ul{
+    margin-top: 2rem;
+    padding-left: 20px;
+    margin-left: 50px;
+}
+
+.about-me p{
+    margin-left: 50px;
+}
+
+#portfolio{
+    margin-bottom: 100px;
+}
+
 
 .portfolio-grid{
-    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -489,15 +504,13 @@ nav a.active-link{
 
 
 
-
-
 .grid-container{
     display: grid;
-    max-width: 2200px;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 9vw 9vw 12vw 12vw 9vw 9vw;
+    max-width: 2000px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 160px 10px 10px 160px 150px;
     justify-content: center;    
-    gap: 3vw 0;
+    gap: 4vw 0;
     grid-template-areas: 
     "box-1 box-1 box-3 box-3"
     "box-1 box-1 box-3 box-3"
@@ -505,38 +518,34 @@ nav a.active-link{
     "box-1 box-1 box-4 box-4"
     "box-2 box-2 box-4 box-4"
     "box-2 box-2 box-4 box-4";
+    height: 500px;
 }
 
 
 
-.card-image{
-    min-height: 40%;
-    overflow: hidden; 
-    border-radius: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
-}
-
-.card-image img{
-    height: 100%;
-    width: 100%;
+.card-image-jpg{
     object-fit: cover;
     object-position: top center;
+    overflow: hidden; 
+    width: 100%;        
+    border-radius: 30px;
 }
 
 .card-2 img, .card-3 img, .card-4 img{
     object-position: center;
-
 }
 
 
 .card-title{
     font-size: 1.7rem;
     font-weight: bold;
-    padding: 15px 0 0 0;
-    color: var(--primary-color);
+    padding: 40px 20px 0 20px;
+    color: var(--background-color);
     flex-shrink: 0;
-    margin: auto 5%;
     font-style: italic;
+    background: linear-gradient(0deg, #f75f0170 20%, transparent);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .card-title::first-letter{
@@ -544,16 +553,19 @@ nav a.active-link{
     -webkit-background-clip: text;
     background-clip: text; 
     color: transparent;
-    
 }
+
 .card-description{
     font-size: 1rem;
-    padding: 10px 10px 20px 10px; 
+    padding-left: 30px;
+    padding-bottom: 45px; 
     color: var(--primary-color);
-    margin: auto 5%;
     overflow: hidden;
-
-
+    background-color: #f75f0170;
+    border-radius: 0 0 30px 30px;
+    color: var(--background-color);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    
 }
 
 
@@ -636,32 +648,43 @@ nav a.active-link{
     
     #close-sidebar-button{
         display: block;
-        color: white}
+        color: white
     }
 
     .home-img{
-    width: 370px;
-    height: 370px;
+        width: 370px;
+        height: 370px;
+    }
+
+
+    .home-img .glowing-circle::after{
+        width: 340px;
+        height: 340px;
+    }
+
+
+    .glowing-circle .image{
+        width: 340px;
+        height: 340px;  
+    }
+
+    .image img {
+        width: 320px;
+        max-width: 320px;    
+    }
+
+    .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 300px 300px 300px;
+    justify-content: center;  
+    margin: 0 2vw;  
+    gap: 10vw 0;
+    grid-template-areas: 
+    "box-1"
+    "box-2"
+    "box-3"
+    "box-4";} 
 }
-
-
-.home-img .glowing-circle::after{
-    width: 340px;
-    height: 340px;
-}
-
-
-.glowing-circle .image{
-    width: 340px;
-    height: 340px;  
-}
-
-.image img {
-    width: 320px;
-    max-width: 320px;
-    
-}
-
 
 @media screen and (max-width:1053px) {
 
@@ -689,20 +712,6 @@ nav a.active-link{
     overflow: hidden; 
     border-radius: 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.7);
-}
-
-.grid-container{
-    
-    grid-template-columns: 2fr;
-    grid-template-rows: 100vw 100vw 100vw 100vw;
-    justify-content: center;  
-    margin: 0 7vw;  
-    gap: 10vw 0;
-    grid-template-areas: 
-    "box-1"
-    "box-2"
-    "box-3"
-    "box-4";
 }
 
 }   
@@ -782,11 +791,11 @@ nav a.active-link{
 @keyframes breathingGlow {
   from {
     opacity: 0.7;
-    transform: scale(0.99); /
+    transform: scale(0.96); /
   }
   to {
     opacity: 0.9; 
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
 }
 

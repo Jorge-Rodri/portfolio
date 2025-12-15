@@ -5,7 +5,7 @@
     --hover-color: #f75f01;
     --nav-color: #131313;
     --background-color: #131313;
-    --degradado: linear-gradient(45deg, rgb(255, 115, 0), rgb(238, 0, 0), rgb(204, 112, 7));
+    --degradado: linear-gradient(45deg, rgb(255, 115, 0), rgb(205, 53, 53), rgb(204, 112, 7));
     --degradado2:linear-gradient(135deg, #f75f01, #FF5F6D);
     --degradado3: linear-gradient(45deg, #f75f01, #4005e4, #f75f01, #4005e4);
     --border-radius: 8px;
@@ -428,7 +428,7 @@ nav a.active-link{
 }
 
 .about-me h2{
-    margin-top: 2.5rem;
+    margin-top: 10vh;
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: bold;
@@ -446,10 +446,13 @@ nav a.active-link{
 
 .about-me p{
     margin-left: 50px;
+    margin-right: 50px;
+
 }
 
 #portfolio{
     margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 
@@ -518,7 +521,7 @@ nav a.active-link{
     "box-1 box-1 box-4 box-4"
     "box-2 box-2 box-4 box-4"
     "box-2 box-2 box-4 box-4";
-    height: 500px;
+    height: auto;
 }
 
 
@@ -567,6 +570,20 @@ nav a.active-link{
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     
 }
+
+.contact-info h2{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-image: var(--degradado);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    text-align: center;
+    
+}
+
 
 
 
@@ -672,7 +689,11 @@ nav a.active-link{
         width: 320px;
         max-width: 320px;    
     }
+    .about-me h2{
+        margin-left: 50px;       
+        margin-right: 50px;
 
+    }
     .grid-container{
     grid-template-columns: 1fr;
     grid-template-rows: 500px 300px 300px 300px;

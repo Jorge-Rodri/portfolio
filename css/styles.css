@@ -133,7 +133,7 @@ nav .logo {
     background-clip: text; 
     color: transparent;
     opacity: 0;
-    animation: slideTop 1s ease forwards 0.3s;
+    animation: slideTop 0.4s ease forwards 0.3s;
 
 }
 
@@ -151,8 +151,8 @@ nav a {
     padding: 1rem 2rem;
     transition: background-color 500ms ease;
     opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: calc(0.2s * var(--i));
+    animation: slideTop 0.4s ease forwards 0.3s;
+    animation-delay: calc(0.1s * var(--i));
 
 }
 
@@ -170,7 +170,7 @@ nav a.active-link{
     position: relative;
     padding: 10px 25px;
     border-radius: 25px;
-    transition: background-color 500ms ease;
+    transition: background-color 400ms ease;
 }
 
 #a:hover{
@@ -188,7 +188,7 @@ nav a.active-link{
     cursor: pointer;
     z-index: 101;
     opacity: 0;
-    animation: slideTop 1s ease forwards 0.3s;
+    animation: slideTop 0.5s ease forwards 0.3s;
 }
 
 #close-sidebar-button{
@@ -230,8 +230,8 @@ nav a.active-link{
     font-size: 3.5rem;
     font-weight: bold;
     opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 0.4s;
+    animation: slideRight 0.8s ease forwards;
+    animation-delay: 0.5s;
 }
 
 
@@ -245,7 +245,7 @@ nav a.active-link{
     color: transparent;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 0.6s;
+    animation-delay: 0.5s;
 }
 
 .description-text p{
@@ -254,7 +254,7 @@ nav a.active-link{
     line-height: 1.5;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 0.7s;    
+    animation-delay: 0.6s;    
 }
 
 .contact-button{
@@ -276,8 +276,8 @@ nav a.active-link{
     transition: 500ms ease, color 500ms ease;
     position: relative;
     opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 1.6s;
+    animation: slideTop 0.7s ease forwards;
+    animation-delay: 1s;
 }
 
 
@@ -318,11 +318,8 @@ nav a.active-link{
     z-index: 1;
     margin-right: 50px;
     opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 0.6s;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 1.5s;
+    animation: slideBottom 0.7s ease forwards;
+    animation-delay: 1s;
 }
 
 
@@ -330,14 +327,14 @@ nav a.active-link{
 
 .social-1 :nth-child(2){
     opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1.5s;
+    animation: slideRight 0.7s ease forwards;
+    animation-delay: 1s;
 }
 
 .social-1 :nth-child(3){
     opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 1.5s;
+    animation: slideTop 0.7s ease forwards;
+    animation-delay: 1s;
 }
 
 .social-1 a::before{
@@ -382,10 +379,8 @@ nav a.active-link{
     width: 410px;
     height: 410px;
     opacity: 0;
-    animation: zoomIn 1s ease forwards;
-    animation-delay: 1s;
-    
-    
+    animation: zoomIn 0.6s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .home-img .glowing-circle{
@@ -511,7 +506,7 @@ nav a.active-link{
     z-index: -1;
     background: var(--degradado3);
     animation: 
-        breathingGlow 3s ease-in-out infinite alternate,
+        breathingGlow 4s ease-in-out infinite alternate,
         gradientMove 10s linear infinite;
     background-size: 300% 300%;
     will-change: background-position, opacity, transform;
@@ -523,15 +518,15 @@ nav a.active-link{
 }
 
 .grid-container > :nth-child(2)::before { 
-    animation-delay: -1.9s; 
+    animation-delay: -3s; 
 }
 
 .grid-container > :nth-child(3)::before { 
-    animation-delay: -2.7s; 
+    animation-delay: -2s; 
 }
 
 .grid-container > :nth-child(4)::before { 
-    animation-delay: -0.3s; 
+    animation-delay: -4s; 
 }
 
 
@@ -683,7 +678,7 @@ nav a.active-link{
         background-clip: text; 
         color: transparent;
         opacity: 0;
-        animation: slideToplobomobile 1s ease forwards 0.3s;
+        animation: slideToplobomobile 0.4s ease forwards 0.3s;
     }
 
     #open-sidebar-button{
@@ -841,11 +836,11 @@ nav a.active-link{
 @keyframes breathingGlow {
   from {
     opacity: 0.7;
-    transform: scale(0.96); /
+    transform: scale(0.98); /
   }
   to {
     opacity: 0.9; 
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 }
 
